@@ -1,3 +1,4 @@
+import 'package:etea/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'routes.dart';
@@ -5,6 +6,9 @@ import 'routes.dart';
 class AppRouter{
  Route? onGenerateRoute(RouteSettings settings){
    switch(settings.name){
+
+      case Routes.onboarding:
+        return MaterialPageRoute(builder: (context) => const OnboardingScreen());
      case Routes.login:
        return MaterialPageRoute(builder: (context) => const Placeholder());
      
