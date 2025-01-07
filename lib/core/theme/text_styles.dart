@@ -27,6 +27,12 @@ class TextStyles {
     fontWeight:FontWeightHelper.semiBold,
   );
 
+  static  TextStyle font18Bold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight:FontWeightHelper.bold,
+
+  );
+  
   static  TextStyle font16Medium = TextStyle(
     fontSize: 16.sp,
     fontWeight:FontWeightHelper.medium,
