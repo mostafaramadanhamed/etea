@@ -1,5 +1,8 @@
 import 'package:etea/core/helper/spacing_extension.dart';
+import 'package:etea/core/routing/navigation_extension.dart';
+import 'package:etea/core/routing/routes.dart';
 import 'package:etea/core/theme/text_styles.dart';
+import 'package:etea/core/widgets/app_text_button.dart';
 import 'package:etea/features/onboarding/data/onboarding_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,9 +41,16 @@ class OnboardingScreen extends StatelessWidget {
                 style: TextStyles.font14LightGreySemiBold,
                 textAlign: TextAlign.center,
               ),
+              24.ph,
+              AppTextButton(buttonText: 'Get Started', onPressed: () {
+                if (index == sliders.length - 1) {
+                 context.pushReplacementNamed(Routes.login);
+                }
+              }),
               const Spacer(),
               BuildDot(index: index),
               12.ph,
+
             ],
           ),
         );
