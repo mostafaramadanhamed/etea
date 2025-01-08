@@ -1,5 +1,8 @@
+import 'package:etea/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../theme/text_styles.dart';
 
 
 class AppTextButton extends StatelessWidget {
@@ -35,13 +38,12 @@ class AppTextButton extends StatelessWidget {
       style: ButtonStyle(
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 16.0.r),
-            side:
-                BorderSide(color: borderColor ?? Colors.greenAccent, width: 2),
+            borderRadius: BorderRadius.circular(borderRadius ?? 4.0.r),
+         
           ),
         ),
         backgroundColor: WidgetStatePropertyAll(
-          backgroundColor ?? Colors.red,
+          backgroundColor ??AppColors.primaryRed,
         ),
      
         padding: WidgetStateProperty.all<EdgeInsets>(
@@ -51,16 +53,17 @@ class AppTextButton extends StatelessWidget {
           ),
         ),
         fixedSize: WidgetStateProperty.all(
-          Size(buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 71.h),
+          Size(buttonWidth?.w ?? double.maxFinite, buttonHeight ?? 55.h),
         ),
       ),
       onPressed: onPressed,
       child: Text(
         buttonText,
-        // style: textStyle ??
-        //     TextStyles.font20SemiBold.copyWith(
-        //       color: textColor ?? Colors.white,
-        //     ),
+        style: textStyle ??
+            TextStyles.font23WhiteSemiBold.copyWith(
+              color: textColor ?? Colors.white,
+              fontSize: 20.sp,
+            ),
       ),
     );
   }

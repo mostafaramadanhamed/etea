@@ -42,15 +42,16 @@ class OnboardingScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               24.ph,
-              AppTextButton(buttonText: 'Get Started', onPressed: () {
-                if (index == sliders.length - 1) {
-                 context.pushReplacementNamed(Routes.login);
-                }
-              }),
+              index == sliders.length - 1
+                  ? AppTextButton(
+                      buttonText: 'Get Started',
+                      onPressed: () {
+                        context.pushReplacementNamed(Routes.login);
+                      })
+                  : Container(),
               const Spacer(),
               BuildDot(index: index),
               12.ph,
-
             ],
           ),
         );
