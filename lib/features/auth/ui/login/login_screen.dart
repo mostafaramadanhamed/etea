@@ -6,6 +6,8 @@ import 'package:etea/core/widgets/app_text_form_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'widgets/social_login.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -24,12 +26,12 @@ class LoginScreen extends StatelessWidget {
                   .copyWith(color: Colors.black, height: 1.2),
             ),
             36.ph,
-            AppTextFormField(
+            const AppTextFormField(
               hintText: 'Email',
               keyboardType: TextInputType.emailAddress,
             ),
             31.ph,
-            AppTextFormField(
+            const AppTextFormField(
               hintText: 'Password',
               isObscureText: true,
               suffixIcon: Icon(Icons.visibility),
@@ -47,7 +49,31 @@ class LoginScreen extends StatelessWidget {
             AppTextButton(
               buttonText: 'Login',
               onPressed: () {},
-            )
+            ),
+            75.ph,
+            const SocialLogin() ,
+                  28.ph,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Create An Account?',
+                      style: TextStyles.font14LightGreySemiBold,
+                    ),
+                    8.pw,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigator.pushNamed(context, AppRouter.signUpScreen);
+                      },
+                      child: Text(
+                        'Sign Up',
+                                        
+                        style: TextStyles.font14LightGreySemiBold
+                            .copyWith(color: AppColors.primaryRed, decoration: TextDecoration.underline),
+                      ),
+                    ),
+                  ],
+                ),
           ],
         ),
       ),
