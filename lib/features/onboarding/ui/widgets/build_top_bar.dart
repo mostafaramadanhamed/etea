@@ -1,5 +1,7 @@
 
 
+import 'package:etea/core/routing/navigation_extension.dart';
+import 'package:etea/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/text_styles.dart';
@@ -28,7 +30,7 @@ class BuildTopBar extends StatelessWidget {
         const Spacer(),
         GestureDetector(
           onTap: () {
-            /// todo: navigate to login screen
+           context.pushReplacementNamed(Routes.login);
           },
           child: Text(
             'Skip',

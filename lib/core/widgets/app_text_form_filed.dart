@@ -44,6 +44,7 @@ class AppTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: onChanged,
+      
       maxLength: maxLength,
       keyboardType: keyboardType ?? TextInputType.text,
       controller: controller,
@@ -52,13 +53,14 @@ class AppTextFormField extends StatelessWidget {
         return validator?.call(value);
       },
       decoration: InputDecoration(
+        filled: true,
           isDense: true,
           contentPadding: contentPadding ??
               EdgeInsets.symmetric(horizontal: 24.w, vertical: 22.h),
           focusedBorder: focusedBorder ??
               OutlineInputBorder(
                 borderSide: const BorderSide(
-                  color:Colors.green,
+                  color:Colors.grey,
                   width: 1.3,
                 ),
                 borderRadius: BorderRadius.circular(16.0.r),
@@ -66,7 +68,7 @@ class AppTextFormField extends StatelessWidget {
           enabledBorder: enabledBorder ??
               OutlineInputBorder(
                 borderSide: const BorderSide(
-                color:Colors.green,
+                color:Colors.grey,
                   width: 1.3,
                 ),
                 borderRadius: BorderRadius.circular(16.r),
