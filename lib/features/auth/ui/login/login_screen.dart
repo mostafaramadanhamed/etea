@@ -16,65 +16,69 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            36.ph,
-            Text(
-              'Welcome\nBack!',
-              style: TextStyles.font34WhiteBold
-                  .copyWith(color: Colors.black, height: 1.2),
-            ),
-            36.ph,
-            const AppTextFormField(
-              hintText: 'Email',
-              keyboardType: TextInputType.emailAddress,
-            ),
-            31.ph,
-            const AppTextFormField(
-              hintText: 'Password',
-              isObscureText: true,
-              suffixIcon: Icon(Icons.visibility),
-            ),
-            9.ph,
-            Align(
-              alignment: AlignmentDirectional.centerEnd,
-              child: Text(
-                'Forgot Password?',
-                style: TextStyles.font14LightGreySemiBold
-                    .copyWith(color: AppColors.primaryRed),
-              ),
-            ),
-            52.ph,
-            AppTextButton(
-              buttonText: 'Login',
-              onPressed: () {},
-            ),
-            75.ph,
-            const SocialLogin() ,
-                  28.ph,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Create An Account?',
-                      style: TextStyles.font14LightGreySemiBold,
-                    ),
-                    8.pw,
-                    GestureDetector(
-                      onTap: () {
-                        // Navigator.pushNamed(context, AppRouter.signUpScreen);
-                      },
-                      child: Text(
-                        'Sign Up',
-                                        
-                        style: TextStyles.font14LightGreySemiBold
-                            .copyWith(color: AppColors.primaryRed, decoration: TextDecoration.underline),
-                      ),
-                    ),
-                  ],
+        child: SingleChildScrollView(
+          child: Form(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                36.ph,
+                Text(
+                  'Welcome\nBack!',
+                  style: TextStyles.font34WhiteBold
+                      .copyWith(color: Colors.black, height: 1.2),
                 ),
-          ],
+                36.ph,
+                const AppTextFormField(
+                  hintText: 'Email',
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                31.ph,
+                const AppTextFormField(
+                  hintText: 'Password',
+                  isObscureText: true,
+                  suffixIcon: Icon(Icons.visibility),
+                ),
+                9.ph,
+                Align(
+                  alignment: AlignmentDirectional.centerEnd,
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyles.font14LightGreySemiBold
+                        .copyWith(color: AppColors.primaryRed),
+                  ),
+                ),
+                52.ph,
+                AppTextButton(
+                  buttonText: 'Login',
+                  onPressed: () {},
+                ),
+                75.ph,
+                const SocialLogin() ,
+                      28.ph,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Create An Account?',
+                          style: TextStyles.font14LightGreySemiBold,
+                        ),
+                        8.pw,
+                        GestureDetector(
+                          onTap: () {
+                            // Navigator.pushNamed(context, AppRouter.signUpScreen);
+                          },
+                          child: Text(
+                            'Sign Up',
+                                            
+                            style: TextStyles.font14LightGreySemiBold
+                                .copyWith(color: AppColors.primaryRed, decoration: TextDecoration.underline),
+                          ),
+                        ),
+                      ],
+                    ),
+              ],
+            ),
+          ),
         ),
       ),
     );
