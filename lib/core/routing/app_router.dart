@@ -1,5 +1,6 @@
 import 'package:etea/features/auth/ui/login/login_screen.dart';
 import 'package:etea/features/auth/ui/register/sign_up_screen.dart';
+import 'package:etea/features/home/ui/get_started_screen.dart';
 import 'package:etea/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,8 @@ class AppRouter{
       case Routes.forgotPassword:
         return MaterialPageRoute(builder: (context) => const Placeholder());
 
+      case Routes.getStarted:
+        return MaterialPageRoute(builder: (context) => const GetStartedScreen());
       case Routes.home:
         return MaterialPageRoute(builder: (context) => const Placeholder());
       

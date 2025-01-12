@@ -52,7 +52,9 @@ class LoginScreen extends StatelessWidget {
                 52.ph,
                 AppTextButton(
                   buttonText: 'Login',
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.getStarted);
+                  },
                 ),
                 75.ph,
                 const SocialLogin() ,
