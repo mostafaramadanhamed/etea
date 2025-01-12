@@ -1,4 +1,6 @@
 import 'package:etea/core/helper/spacing_extension.dart';
+import 'package:etea/core/routing/navigation_extension.dart';
+import 'package:etea/core/routing/routes.dart';
 import 'package:etea/core/theme/app_colors.dart';
 import 'package:etea/core/theme/text_styles.dart';
 import 'package:etea/core/widgets/app_text_button.dart';
@@ -65,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                         8.pw,
                         GestureDetector(
                           onTap: () {
-                            // Navigator.pushNamed(context, AppRouter.signUpScreen);
+                            context.pushNamed(Routes.signUp);
                           },
                           child: Text(
                             'Sign Up',

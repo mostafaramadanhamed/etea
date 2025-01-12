@@ -1,4 +1,5 @@
 import 'package:etea/features/auth/ui/login/login_screen.dart';
+import 'package:etea/features/auth/ui/register/sign_up_screen.dart';
 import 'package:etea/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class AppRouter{
        return MaterialPageRoute(builder: (context) => const LoginScreen());
      
      case Routes.signUp:
-       return MaterialPageRoute(builder: (context) => const Placeholder());
+       return MaterialPageRoute(builder: (context) => const SignUpScreen());
 
       case Routes.forgotPassword:
         return MaterialPageRoute(builder: (context) => const Placeholder());
