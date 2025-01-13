@@ -1,4 +1,6 @@
 import 'package:etea/core/helper/spacing_extension.dart';
+import 'package:etea/core/routing/navigation_extension.dart';
+import 'package:etea/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,11 +25,15 @@ class GetStartedScreen extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment.topCenter,
+                begin: Alignment.center,
                 end: Alignment.bottomCenter,
+                stops: const [
+                  0.0,
+                  0.24,
+                ],
                 colors: [
                   Colors.transparent,
-                  Colors.black.withOpacity(0.8),
+                  Colors.black.withOpacity(0.63),
                 ],
               ),
             ),
@@ -46,7 +52,7 @@ class GetStartedScreen extends StatelessWidget {
                 AppTextButton(
                   buttonText: 'Get Started',
                   onPressed: () {
-                    // Navigator.pushNamed(context, AppRouter.loginScreen);
+                    context.pushReplacementNamed(Routes.home);
                   },
                 ),
                 34.ph,
