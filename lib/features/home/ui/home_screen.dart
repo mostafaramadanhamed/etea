@@ -4,6 +4,7 @@ import 'package:etea/features/home/ui/widget/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'widget/categories_list_view.dart';
 import 'widget/home_app_bar.dart';
 import 'widget/text_icon_button.dart';
 
@@ -42,6 +43,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              16.ph,
+              Container(
+                color: Colors.white,
+                height: 90.h,
+                child: const CategoriesListView(),
+              )
             ],
           ),
         ),
