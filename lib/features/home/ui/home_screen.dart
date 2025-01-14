@@ -4,6 +4,7 @@ import 'package:etea/features/home/ui/widget/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'widget/auto_scroll_banner.dart';
 import 'widget/categories_list_view.dart';
 import 'widget/home_app_bar.dart';
 import 'widget/text_icon_button.dart';
@@ -48,7 +49,10 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
                 height: 90.h,
                 child: const CategoriesListView(),
-              )
+              ),
+              16.ph,
+              // offers banner auto scroll
+              const AutoScrollBanner()
             ],
           ),
         ),
@@ -56,3 +60,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
