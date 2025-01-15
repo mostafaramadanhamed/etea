@@ -7,7 +7,9 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/text_styles.dart';
 
 class ProductItem extends StatelessWidget {
+  final bool isTrending;
   const ProductItem({
+    required this.isTrending,
     super.key,
   });
 
@@ -19,14 +21,15 @@ class ProductItem extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(6)),
       margin: EdgeInsets.only(right: 12.w),
-      width: 170.w,
+      width:isTrending ? 148.w : 170.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.network(
             'https://images.pexels.com/photos/415612/pexels-photo-415612.jpeg?auto=compress&cs=tinysrgb&w=600',
-            height: 124.h,
-            fit: BoxFit.fitHeight,
+            height: 100.h,
+            width: double.infinity,
+            fit: BoxFit.cover,
           ),
           4.ph,
           Padding(
@@ -75,7 +78,7 @@ class ProductItem extends StatelessWidget {
                 ),
                 4.ph,
                 // product  rating
-                Row(
+             isTrending ? Container() :   Row(
                   children: [
                     const Icon(
                       Icons.star,

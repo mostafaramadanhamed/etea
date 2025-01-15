@@ -65,7 +65,12 @@ class HomeScreen extends StatelessWidget {
               const DealsProductListView(),
               16.ph,
               // trending products
-              const TrendingProductsRow()
+              const TrendingProductsRow(),
+              16.ph,
+              // trending products
+              const DealsProductListView(
+                isTrending: true,
+              ),
             ],
           ),
         ),
