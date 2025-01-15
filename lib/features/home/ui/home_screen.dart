@@ -11,6 +11,7 @@ import 'widget/deal_of_day_timer.dart';
 import 'widget/deals_product_list_view.dart';
 import 'widget/home_app_bar.dart';
 import 'widget/text_icon_button.dart';
+import 'widget/trending_products_row.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -63,6 +64,8 @@ class HomeScreen extends StatelessWidget {
               // Deals of the day products
               const DealsProductListView(),
               16.ph,
+              // trending products
+              const TrendingProductsRow()
             ],
           ),
         ),
