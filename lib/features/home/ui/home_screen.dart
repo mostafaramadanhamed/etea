@@ -8,6 +8,7 @@ import 'package:etea/features/home/ui/widget/search_bar.dart';
 import 'widget/auto_scroll_banner.dart';
 import 'widget/categories_list_view.dart';
 import 'widget/deal_of_day_timer.dart';
+import 'widget/deals_product_list_view.dart';
 import 'widget/home_app_bar.dart';
 import 'widget/text_icon_button.dart';
 
@@ -56,7 +57,11 @@ class HomeScreen extends StatelessWidget {
               // offers banner auto scroll
               const AutoScrollBanner(),
               32.ph,
+              // deal of the day timer
               const DealOfDayTimer(),
+              16.ph,
+              // Deals of the day products
+              const DealsProductListView(),
               16.ph,
             ],
           ),
