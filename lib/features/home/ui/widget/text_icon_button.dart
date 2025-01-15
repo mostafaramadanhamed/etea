@@ -9,11 +9,13 @@ class TextIconButton extends StatelessWidget {
   final IconData icon;
   final void Function() onPressed;
   final Color color;
+  final Color backgroundColor;
   const TextIconButton(
       {super.key,
       required this.text,
       required this.icon,
       required this.onPressed,
+      this.backgroundColor = Colors.white,
       this.color = Colors.black});
 
   @override
@@ -21,7 +23,14 @@ class TextIconButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(Colors.white),
+        backgroundColor: WidgetStateProperty.all<Color>(backgroundColor),
+        side: const WidgetStatePropertyAll(BorderSide(color: Colors.white)),
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+
+        )
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
