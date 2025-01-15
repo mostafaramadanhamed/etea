@@ -16,10 +16,12 @@ class ETeaApp extends StatelessWidget {
       child: MaterialApp(
         title: 'ETea',
         theme: ThemeData(
-         scaffoldBackgroundColor: Colors.white
-                ),
-       initialRoute: Routes.onboarding,
-       onGenerateRoute: appRouter.onGenerateRoute,
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Color(0xffF9F9F9),
+            ),
+            scaffoldBackgroundColor: const Color(0xffF9F9F9)),
+        initialRoute: Routes.onboarding,
+        onGenerateRoute: appRouter.onGenerateRoute,
         debugShowCheckedModeBanner: false,
       ),
     );
