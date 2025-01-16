@@ -27,33 +27,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               16.ph,
               const HomeSearchBar(),
-              16.ph,
-              Row(
-                children: [
-                  Text(
-                    'All Featured',
-                    style: TextStyles.font18Bold,
-                  ),
-                  const Spacer(),
-                  TextIconButton(
-                    text: 'Sort',
-                    icon: Icons.swap_vert,
-                    onPressed: () {},
-                  ),
-                  8.pw,
-                  TextIconButton(
-                    text: 'Filter',
-                    icon: Icons.filter_alt_outlined,
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-              16.ph,
-              Container(
-                color: Colors.white,
-                height: 90.h,
-                child: const CategoriesListView(),
-              ),
+   
               16.ph,
               // offers banner auto scroll
               const AutoScrollBanner(),
