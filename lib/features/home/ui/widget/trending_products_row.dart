@@ -1,8 +1,10 @@
 
 
+import 'package:etea/core/routing/navigation_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/text_styles.dart';
 import 'text_icon_button.dart';
@@ -42,7 +44,10 @@ class TrendingProductsRow extends StatelessWidget {
             icon: Icons.arrow_forward,
             color: Colors.white,
             backgroundColor: Colors.transparent,
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.product);
+
+            },
           ),
         ]));
   }
