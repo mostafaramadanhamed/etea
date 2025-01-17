@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:etea/core/helper/spacing_extension.dart';
-import 'package:etea/core/theme/text_styles.dart';
 import 'package:etea/features/home/ui/widget/search_bar.dart';
 
 import 'widget/auto_scroll_banner.dart';
@@ -10,7 +9,6 @@ import 'widget/categories_list_view.dart';
 import 'widget/deal_of_day_timer.dart';
 import 'widget/deals_product_list_view.dart';
 import 'widget/home_app_bar.dart';
-import 'widget/text_icon_button.dart';
 import 'widget/trending_products_row.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -27,7 +25,11 @@ class HomeScreen extends StatelessWidget {
             children: [
               16.ph,
               const HomeSearchBar(),
-   
+              Container(
+                color: Colors.white,
+                height: 90.h,
+                child: const CategoriesListView(),
+              ),
               16.ph,
               // offers banner auto scroll
               const AutoScrollBanner(),

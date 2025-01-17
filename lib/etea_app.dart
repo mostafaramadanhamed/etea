@@ -20,7 +20,7 @@ class ETeaApp extends StatelessWidget {
               backgroundColor: Color(0xffF9F9F9),
             ),
             scaffoldBackgroundColor: const Color(0xffF9F9F9)),
-        initialRoute: Routes.onboarding,
+        initialRoute: Routes.home,
         onGenerateRoute: appRouter.onGenerateRoute,
         debugShowCheckedModeBanner: false,
       ),
