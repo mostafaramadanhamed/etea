@@ -1,11 +1,10 @@
-import 'package:etea/features/home/ui/widget/product_item.dart';
-import 'package:etea/features/products/ui/widgets/product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+import 'package:etea/features/products/ui/widgets/product_item.dart';
 import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:etea/features/home/ui/widget/home_app_bar.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../../core/theme/text_styles.dart';
 import '../../home/ui/widget/search_bar.dart';
