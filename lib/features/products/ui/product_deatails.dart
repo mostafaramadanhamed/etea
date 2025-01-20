@@ -45,7 +45,35 @@ class ProductDeatails extends StatelessWidget {
               ),
               16.ph,
               // product size
-  
+              Text('Size: 7UK'),
+              16.ph,
+              // product sizes list view
+              SizedBox(
+                height: 35.h,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 50.w,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4.r),
+                          border: Border.all(
+                            color: AppColors.lightRed,
+                            width: 1.5,
+                          )),
+                      child: Text(
+                        sizes[index],
+                        style: TextStyles.font14LightGreySemiBold.copyWith(
+                          color: AppColors.lightRed,
+                        ),
+                      ),
+                    );
+                  },
+                  itemCount: 5,
+                  separatorBuilder: (context, index) => 8.pw,
+                ),
+              ),
             ],
           ),
         ),
