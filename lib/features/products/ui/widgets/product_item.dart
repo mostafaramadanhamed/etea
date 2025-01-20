@@ -1,7 +1,9 @@
 import 'package:etea/core/helper/spacing_extension.dart';
+import 'package:etea/core/routing/navigation_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/text_styles.dart';
 
 class ProductItem extends StatelessWidget {
@@ -19,87 +21,92 @@ class ProductItem extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      clipBehavior: Clip.antiAliasWithSaveLayer,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.15),
-            spreadRadius: 0,
-            blurRadius: 2,
-            offset: const Offset(0, 2),
-          ),
-        ],
-        borderRadius: BorderRadius.circular(8.r),
-      ),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8.r),
-            child: Image.network(
-              images[index],
-              height: height / 1.6.h,
-              width: double.infinity,
-              fit: BoxFit.cover,
+    return InkWell(
+      onTap: () {
+        context.pushNamed(Routes.productDetail);
+      },
+      child: Container(
+        height: height,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.15),
+              spreadRadius: 0,
+              blurRadius: 2,
+              offset: const Offset(0, 2),
             ),
-          ),
-          8.ph,
-          //title
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Black Leather Watch',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyles.font16Medium,
-                ),
-                4.ph,
-                //description
-                Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                  style: TextStyles.font12LightGreyRegular.copyWith(
-                    color: Colors.black,
-                    fontSize: 10.sp,
+          ],
+          borderRadius: BorderRadius.circular(8.r),
+        ),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8.r),
+              child: Image.network(
+                images[index],
+                height: height / 1.6.h,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
+            8.ph,
+            //title
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Black Leather Watch',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyles.font16Medium,
                   ),
-                ),
-
-                4.ph,
-                Row(
-                  children: [
-                    //price
-                    Text(
-                      '\$ 1067',
-                      style: TextStyles.font12LightGreyRegular.copyWith(
-                        color: Colors.black,
+                  4.ph,
+                  //description
+                  Text(
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                    style: TextStyles.font12LightGreyRegular.copyWith(
+                      color: Colors.black,
+                      fontSize: 10.sp,
+                    ),
+                  ),
+      
+                  4.ph,
+                  Row(
+                    children: [
+                      //price
+                      Text(
+                        '\$ 1067',
+                        style: TextStyles.font12LightGreyRegular.copyWith(
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
-                    const Spacer(),
-                    Text(
-                      '4.5',
-                      style: TextStyles.font12LightGreyRegular
-                          .copyWith(color: Colors.black),
-                    ),
-                    const Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 16,
-                    ),
-                    Text(
-                      '(12)',
-                      style: TextStyles.font12LightGreyRegular,
-                    ),
-                  ],
-                )
-              ],
+                      const Spacer(),
+                      Text(
+                        '4.5',
+                        style: TextStyles.font12LightGreyRegular
+                            .copyWith(color: Colors.black),
+                      ),
+                      const Icon(
+                        Icons.star,
+                        color: Colors.amber,
+                        size: 16,
+                      ),
+                      Text(
+                        '(12)',
+                        style: TextStyles.font12LightGreyRegular,
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
