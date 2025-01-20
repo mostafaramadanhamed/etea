@@ -74,6 +74,13 @@ class ProductDeatails extends StatelessWidget {
                   separatorBuilder: (context, index) => 8.pw,
                 ),
               ),
+              16.ph,
+              // product name 
+              Text(
+                'Nike Sneakers',
+                style: TextStyles.font18Bold,
+              ),
+              
             ],
           ),
         ),
