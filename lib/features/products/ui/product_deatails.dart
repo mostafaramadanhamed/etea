@@ -75,11 +75,21 @@ class ProductDeatails extends StatelessWidget {
                 ),
               ),
               16.ph,
-              // product name 
+              // product name
               Text(
                 'Nike Sneakers',
                 style: TextStyles.font18Bold,
               ),
+              8.ph,
+              // product subtitle
+              Text(
+                'Vision Alta Men\'s Shoes All Colors',
+                style: TextStyles.font14LightGreySemiBold.copyWith(
+                  color: Colors.black,
+                ),
+                
+              ),
+              8.ph,
               
             ],
           ),
