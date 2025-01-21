@@ -217,7 +217,39 @@ class ProductDeatails extends StatelessWidget {
                           horizontal: 20, vertical: 12), // Adjust padding
                     ),
                   ),
-               ],
+                  16.pw,
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      // Add your button functionality here
+                    },
+                    icon: const Icon(
+                      Icons.touch_app_outlined, // Use a shopping cart icon
+                      color:
+                          Colors.white, // Adjust the color to match the design
+                    ),
+                    label: const Text(
+                      'Buy Now',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(
+                          255, 74, 213, 132), // Button background color
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(32),
+                          bottomRight: Radius.circular(12),
+                          bottomLeft: Radius.circular(32),
+                          topRight: Radius.circular(12),
+                        ), // Rounded corners
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12), // Adjust padding
+                    ),
+                  ),
+                ],
               )
             ],
           ),
