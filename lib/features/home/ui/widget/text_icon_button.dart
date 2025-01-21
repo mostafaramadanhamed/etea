@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/text_styles.dart';
@@ -10,11 +8,13 @@ class TextIconButton extends StatelessWidget {
   final void Function() onPressed;
   final Color color;
   final Color backgroundColor;
+  final Color? borderColor;
   const TextIconButton(
+      
       {super.key,
       required this.text,
       required this.icon,
-      required this.onPressed,
+      required this.onPressed, this.borderColor,
       this.backgroundColor = Colors.white,
       this.color = Colors.black});
 
@@ -23,15 +23,13 @@ class TextIconButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all<Color>(backgroundColor),
-        side: const WidgetStatePropertyAll(BorderSide(color: Colors.white)),
-        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-
-        )
-      ),
+          backgroundColor: WidgetStateProperty.all<Color>(backgroundColor),
+          side:  WidgetStatePropertyAll(BorderSide(color:borderColor?? Colors.white)),
+          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          )),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
