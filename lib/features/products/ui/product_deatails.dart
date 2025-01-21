@@ -1,4 +1,3 @@
-import 'package:etea/core/helper/font_weight_helper.dart';
 import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:etea/core/routing/navigation_extension.dart';
 import 'package:etea/core/theme/app_colors.dart';
@@ -139,6 +138,52 @@ class ProductDeatails extends StatelessWidget {
                   ),
                 ],
               ),
+                16.ph,
+              // product description
+              Text(
+                'Product Details ',
+                style: TextStyles.font16Medium,
+              ),
+              8.ph,
+              Text(
+                'Perhaps the most iconic sneaker of all-time, this original "Chicago"? colorway is the cornerstone to any sneaker collection. Made famous in 1985 by Michael Jordan, the shoe has stood the test of time, becoming the most famous colorway of the Air Jordan 1. This 2015 release saw the ...More',
+                style: TextStyles.font12LightGreyRegular.copyWith(
+                  color: Colors.black,
+                ),
+              ),
+              8.ph,
+              // product features
+              Row(
+                children: [
+                  TextIconButton(
+                    icon: Icons.location_on_outlined,
+                    text: "Nearset Store",
+                    color: Colors.grey,
+                    backgroundColor: Colors.transparent,
+                    onPressed: () {},
+                    borderColor: AppColors.lightGrey,
+                  ),
+                  8.pw,
+                  TextIconButton(
+                    icon: Icons.lock_outline_rounded,
+                    text: "VIP",
+                    color: Colors.grey,
+                    backgroundColor: Colors.transparent,
+                    onPressed: () {},
+                    borderColor: AppColors.lightGrey,
+                  ),
+                  8.pw,
+                  TextIconButton(
+                    icon: Icons.restore_sharp,
+                    text: "Return policy",
+                    color: Colors.grey,
+                    backgroundColor: Colors.transparent,
+                    onPressed: () {},
+                    borderColor: AppColors.lightGrey,
+                  ),
+                ],
+              ),
+            
             ],
           ),
         ),
