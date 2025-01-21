@@ -1,7 +1,9 @@
+import 'package:etea/core/helper/font_weight_helper.dart';
 import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:etea/core/routing/navigation_extension.dart';
 import 'package:etea/core/theme/app_colors.dart';
 import 'package:etea/core/theme/text_styles.dart';
+import 'package:etea/features/home/ui/widget/text_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -37,7 +39,7 @@ class ProductDeatails extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(16.r),
                 child: Image.network(
-                  'https://images-na.ssl-images-amazon.com/images/I/81aF3Ob-2KL._UX679_.jpg',
+                  'https://images.unsplash.com/photo-1579446650032-86effeeb3389?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                   // height: 215.h,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -84,13 +86,59 @@ class ProductDeatails extends StatelessWidget {
               // product subtitle
               Text(
                 'Vision Alta Men\'s Shoes All Colors',
-                style: TextStyles.font14LightGreySemiBold.copyWith(
-                  color: Colors.black,
-                ),
-                
+                style: TextStyles.font14Regular,
               ),
               8.ph,
-              
+              //product rating
+              Row(
+                children: [
+                  const Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  const Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  const Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  const Icon(
+                    Icons.star,
+                    color: Colors.amber,
+                  ),
+                  const Icon(
+                    Icons.star_half_rounded,
+                    color: Colors.grey,
+                  ),
+                  8.pw,
+                  Text('56,890', style: TextStyles.font14Regular),
+                ],
+              ),
+              8.ph,
+              // product price
+              Row(
+                children: [
+                  Text(
+                    '\$2,999',
+                    style: TextStyles.font14LightGreySemiBold
+                        .copyWith(decoration: TextDecoration.lineThrough),
+                  ),
+                  8.pw,
+                  Text(
+                    '\$1,500',
+                    style: TextStyles.font16Medium,
+                  ),
+                  8.pw,
+                  Text(
+                    '50% Off',
+                    style: TextStyles.font14LightGreySemiBold.copyWith(
+                      color: AppColors.lightRed,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
