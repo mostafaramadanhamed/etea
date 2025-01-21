@@ -46,7 +46,7 @@ class ProductDeatails extends StatelessWidget {
               ),
               16.ph,
               // product size
-              Text('Size: 7UK'),
+              const Text('Size: 7UK'),
               16.ph,
               // product sizes list view
               SizedBox(
@@ -138,7 +138,7 @@ class ProductDeatails extends StatelessWidget {
                   ),
                 ],
               ),
-                16.ph,
+              16.ph,
               // product description
               Text(
                 'Product Details ',
@@ -183,7 +183,42 @@ class ProductDeatails extends StatelessWidget {
                   ),
                 ],
               ),
-            
+              8.ph,
+              Row(
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      // Add your button functionality here
+                    },
+                    icon: const Icon(
+                      Icons.shopping_cart_outlined, // Use a shopping cart icon
+                      color:
+                          Colors.white, // Adjust the color to match the design
+                    ),
+                    label: const Text(
+                      'Go to cart',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          const Color(0xff2B6FD0), // Button background color
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(32),
+                          bottomRight: Radius.circular(12),
+                          bottomLeft: Radius.circular(32),
+                          topRight: Radius.circular(12),
+                        ), // Rounded corners// Rounded corners
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12), // Adjust padding
+                    ),
+                  ),
+               ],
+              )
             ],
           ),
         ),
