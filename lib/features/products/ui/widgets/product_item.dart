@@ -27,6 +27,7 @@ class ProductItem extends StatelessWidget {
       },
       child: Container(
         height: height,
+        width: 165.w,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         decoration: BoxDecoration(
           color: Colors.white,
