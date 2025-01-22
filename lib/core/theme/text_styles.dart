@@ -39,6 +39,10 @@ class TextStyles {
 
   );
 
+  static  TextStyle font14Regular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight:FontWeightHelper.regular,
+  );
   static  TextStyle font14LightGreySemiBold = TextStyle(
     fontSize: 14.sp,
     color: AppColors.lightGrey,

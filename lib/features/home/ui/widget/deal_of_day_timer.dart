@@ -1,5 +1,7 @@
 
 
+import 'package:etea/core/routing/navigation_extension.dart';
+import 'package:etea/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -42,7 +44,9 @@ class DealOfDayTimer extends StatelessWidget {
             icon: Icons.arrow_forward,
             color: Colors.white,
             backgroundColor:Colors.transparent,
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.product);
+            },
           ),
         ]));
   }

@@ -12,7 +12,8 @@ class Routes{
   static const String changeLanguage = '/changeLanguage';
   static const String changeTheme = '/changeTheme';
   static const String category = '/category';
-  static const String product = '/product';
+  static const String product = '/products';
+  static const String productDetail = '/productDetail';
   static const String cart = '/cart';
   static const String order = '/order';
   static const String orderDetail = '/orderDetail';

@@ -1,4 +1,3 @@
-
 import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,9 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/text_styles.dart';
 
-class ProductItem extends StatelessWidget {
+class OfferProductItem extends StatelessWidget {
   final bool isTrending;
-  const ProductItem({
+  const OfferProductItem({
     required this.isTrending,
     super.key,
   });
@@ -18,10 +17,9 @@ class ProductItem extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAliasWithSaveLayer,
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(6)),
+          color: Colors.white, borderRadius: BorderRadius.circular(6)),
       margin: EdgeInsets.only(right: 12.w),
-      width:isTrending ? 148.w : 170.w,
+      width: isTrending ? 148.w : 170.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -40,19 +38,17 @@ class ProductItem extends StatelessWidget {
                 // product name
                 Text(
                   'Product Name',
-                  style: TextStyles.font12LightGreyRegular
-                      .copyWith(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          height: 1.6),
+                  style: TextStyles.font12LightGreyRegular.copyWith(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      height: 1.6),
                 ),
                 4.ph,
-    
+
                 // product price
                 Text(
                   '₹ 200',
-                  style: TextStyles.font12LightGreyRegular
-                      .copyWith(
+                  style: TextStyles.font12LightGreyRegular.copyWith(
                     color: Colors.black,
                   ),
                 ),
@@ -62,8 +58,7 @@ class ProductItem extends StatelessWidget {
                   children: [
                     Text(
                       '₹ 300',
-                      style: TextStyles.font12LightGreyRegular
-                          .copyWith(
+                      style: TextStyles.font12LightGreyRegular.copyWith(
                         decoration: TextDecoration.lineThrough,
                       ),
                     ),
@@ -71,32 +66,33 @@ class ProductItem extends StatelessWidget {
                     Text(
                       '33% off',
                       style: TextStyles.font12LightGreyRegular
-                          .copyWith(
-                              color: AppColors.primaryRed),
+                          .copyWith(color: AppColors.primaryRed),
                     ),
                   ],
                 ),
                 4.ph,
                 // product  rating
-             isTrending ? Container() :   Row(
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      size: 16,
-                      color: Colors.yellow,
-                    ),
-                    4.pw,
-                    Text(
-                      '4.5',
-                      style: TextStyles.font12LightGreyRegular,
-                    ),
-                    4.pw,
-                    Text(
-                      '(26780)',
-                      style: TextStyles.font12LightGreyRegular,
-                    ),
-                  ],
-                )
+                isTrending
+                    ? Container()
+                    : Row(
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            size: 16,
+                            color: Colors.yellow,
+                          ),
+                          4.pw,
+                          Text(
+                            '4.5',
+                            style: TextStyles.font12LightGreyRegular,
+                          ),
+                          4.pw,
+                          Text(
+                            '(26780)',
+                            style: TextStyles.font12LightGreyRegular,
+                          ),
+                        ],
+                      )
               ],
             ),
           ),
