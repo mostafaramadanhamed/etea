@@ -250,7 +250,33 @@ class ProductDeatails extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              12.ph,
+              Container(
+                height: 60.h,
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 8.h),
+                decoration: BoxDecoration(
+                  color: AppColors.lighterRed,
+                  borderRadius: BorderRadius.circular(5.r),
+                ),
+                child: RichText(
+                  text: TextSpan(
+                    text: 'Delivery in\n',
+                    style: TextStyles.font14LightGreySemiBold.copyWith(
+                      color: Colors.black,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: '1 within Hour',
+                        style: TextStyles.font18Bold,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              16.ph,
+              
             ],
           ),
         ),
