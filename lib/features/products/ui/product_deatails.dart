@@ -3,6 +3,7 @@ import 'package:etea/core/routing/navigation_extension.dart';
 import 'package:etea/core/theme/app_colors.dart';
 import 'package:etea/core/theme/text_styles.dart';
 import 'package:etea/features/home/ui/widget/text_icon_button.dart';
+import 'package:etea/features/products/ui/widgets/product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -276,7 +277,24 @@ class ProductDeatails extends StatelessWidget {
                 ),
               ),
               16.ph,
-              
+              Text(
+                'Similar Items',
+                style: TextStyles.font23WhiteSemiBold
+                    .copyWith(color: Colors.black,),
+              ),
+              16.ph,
+              SizedBox(
+                height: 245.h,
+                child: ListView.separated(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return ProductItem(height: 245, index: index);
+                  },
+                  separatorBuilder: (context, index) => 8.pw,
+                ),
+              ),
             ],
           ),
         ),
