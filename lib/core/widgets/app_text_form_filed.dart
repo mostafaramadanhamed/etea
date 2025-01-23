@@ -1,7 +1,7 @@
+import 'package:etea/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
@@ -44,7 +44,7 @@ class AppTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       onChanged: onChanged,
-      
+
       maxLength: maxLength,
       keyboardType: keyboardType ?? TextInputType.text,
       controller: controller,
@@ -54,49 +54,49 @@ class AppTextFormField extends StatelessWidget {
       },
       decoration: InputDecoration(
         filled: true,
-          isDense: true,
-          contentPadding: contentPadding ??
-              EdgeInsets.symmetric(horizontal: 24.w, vertical: 22.h),
-          focusedBorder: focusedBorder ??
-              OutlineInputBorder(
-                borderSide: const BorderSide(
-                  color:Colors.grey,
-                  width: 1.3,
-                ),
-                borderRadius: BorderRadius.circular(10.0.r),
+        isDense: true,
+        contentPadding: contentPadding ??
+            EdgeInsets.symmetric(horizontal: 24.w, vertical: 22.h),
+        focusedBorder: focusedBorder ??
+            OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: Colors.grey,
+                width: 1.3,
               ),
-          enabledBorder: enabledBorder ??
-              OutlineInputBorder(
-                borderSide: const BorderSide(
-                color:Colors.grey,
-                  width: 1.3,
-                ),
-                borderRadius: BorderRadius.circular(10.r),
+              borderRadius: BorderRadius.circular(10.0.r),
+            ),
+        enabledBorder: enabledBorder ??
+            OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: Colors.grey,
+                width: 1.3,
               ),
-          errorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
-              color: Colors.red,
-              width: 1.3,
+              borderRadius: BorderRadius.circular(10.r),
             ),
-            borderRadius: BorderRadius.circular(10.0.r),
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
           ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(
-              color: Colors.red,
-              width: 1.3,
-            ),
-            borderRadius: BorderRadius.circular(16.0.r),
+          borderRadius: BorderRadius.circular(10.0.r),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
           ),
+          borderRadius: BorderRadius.circular(16.0.r),
+        ),
         //  hintStyle: hintStyle ?? TextStyles.font15Regular,
-          hintText: hintText,
-          suffixIcon: suffixIcon,
-          labelText: label,
-          alignLabelWithHint: true
-          //  fillColor: backgroundColor ??Colors.green.moreLightGray,
-          //  filled: true,
-          ),
+        hintText: hintText,
+        suffixIcon: suffixIcon,
+        labelText: label,
+        alignLabelWithHint: true,
+        fillColor: backgroundColor ?? AppColors.lightGrey,
+        //  filled: true,
+      ),
       obscureText: isObscureText ?? false,
-     // style: TextStyles.font15SemiBold,
+      // style: TextStyles.font15SemiBold,
     );
   }
 }
