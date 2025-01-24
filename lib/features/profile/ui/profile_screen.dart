@@ -1,6 +1,5 @@
 import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:etea/core/theme/text_styles.dart';
-import 'package:etea/core/widgets/app_text_form_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -48,7 +47,36 @@ class ProfileScreen extends StatelessWidget {
               ),
               const TitlewithTextFiled(
                   title: "Password", hintText: "********************"),
+              const Divider(), 
+              28.ph,
+              Text(
+                'Business Addess Details',
+                style: TextStyles.font18Bold,
+              ),
+              20.ph,
+              const TitlewithTextFiled(
+                title: "Pin Code",
+                hintText: "123456",
+              ),
+              const TitlewithTextFiled(
+                  title: "Address", hintText: "216 street, New York, USA"),
+              const TitlewithTextFiled(
+                title: "City",
+                hintText: "New York",
+              ),
+
+              const TitlewithTextFiled(
+                title: "State",
+                hintText: "New York",
+              ),
+
+              const TitlewithTextFiled( 
+                title: "Country",
+                hintText: "United States",
+              ),
+
               const Divider(),
+
             ],
           ),
         ),
