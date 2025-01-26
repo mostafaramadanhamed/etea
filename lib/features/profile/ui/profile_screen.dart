@@ -74,8 +74,23 @@ class ProfileScreen extends StatelessWidget {
                 title: "Country",
                 hintText: "United States",
               ),
-
               const Divider(),
+              28.ph,
+              Text(
+                'Bank Account Details',
+                style: TextStyles.font18Bold,
+              ),
+              20.ph,
+              const TitlewithTextFiled(
+                title: "Bank Account Number",
+                hintText: "1234567XXXXXXXXXXXX",
+              ),
+              const TitlewithTextFiled(
+                  title: "Account Holder Name", hintText: "John Doe"),
+              const TitlewithTextFiled(
+                title:"IFSC Code",
+                hintText: "SBIN0000001",  
+              ),
 
             ],
           ),
