@@ -2,10 +2,12 @@ import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/routing/routes.dart';
+import '../../../../core/routing/navigation_extension.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/text_styles.dart';
 
-AppBar buildHomeAppBar() {
+AppBar buildHomeAppBar(BuildContext context) {
     return AppBar(
       leading: IconButton(
         icon: const Icon(Icons.density_medium_outlined),
@@ -32,7 +34,7 @@ AppBar buildHomeAppBar() {
       actions: [
        InkWell(
         onTap: (){
-          ///TODO navigate to profile screen
+          context.pushNamed(Routes.profile);
         } ,
          child: CircleAvatar(
            radius: 20.r,
