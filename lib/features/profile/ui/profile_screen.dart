@@ -1,5 +1,6 @@
 import 'package:etea/core/helper/spacing_extension.dart';
 import 'package:etea/core/theme/text_styles.dart';
+import 'package:etea/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -47,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const TitlewithTextFiled(
                   title: "Password", hintText: "********************"),
-              const Divider(), 
+              const Divider(),
               28.ph,
               Text(
                 'Business Addess Details',
@@ -64,13 +65,11 @@ class ProfileScreen extends StatelessWidget {
                 title: "City",
                 hintText: "New York",
               ),
-
               const TitlewithTextFiled(
                 title: "State",
                 hintText: "New York",
               ),
-
-              const TitlewithTextFiled( 
+              const TitlewithTextFiled(
                 title: "Country",
                 hintText: "United States",
               ),
@@ -88,10 +87,11 @@ class ProfileScreen extends StatelessWidget {
               const TitlewithTextFiled(
                   title: "Account Holder Name", hintText: "John Doe"),
               const TitlewithTextFiled(
-                title:"IFSC Code",
-                hintText: "SBIN0000001",  
+                title: "IFSC Code",
+                hintText: "SBIN0000001",
               ),
-
+              AppTextButton(buttonText: "Save", onPressed: () {}),
+              30.ph,
             ],
           ),
         ),
